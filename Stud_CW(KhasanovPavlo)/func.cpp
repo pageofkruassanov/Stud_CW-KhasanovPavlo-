@@ -1,6 +1,6 @@
 #include "func.h"
 
-void addStudent(Student* stud, int& sizeArr, const char* name, int age)
+void addStudent(Student*& stud, int& sizeArr, const char* name, int age)
 {
 	sizeArr++;
 	Student* tempStud = new Student[sizeArr];
