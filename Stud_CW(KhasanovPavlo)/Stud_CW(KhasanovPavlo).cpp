@@ -31,7 +31,6 @@ int main()
     students[1].setName(name);
     students[1].setAge(age);
 
-
     cout << "¬ведите им€ 3 студента: ";
     cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     cin.getline(name, 40);

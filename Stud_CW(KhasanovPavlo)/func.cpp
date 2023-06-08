@@ -9,5 +9,6 @@ void addStudent(Student*& stud, int& sizeArr, const char* name, int age)
 	}
 	tempStud[sizeArr - 1].setName(name);
 	tempStud[sizeArr - 1].setAge(age);
+	delete[] stud;
 	stud = tempStud;
 }

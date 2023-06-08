@@ -20,6 +20,16 @@ Student::Student(const char* Name, int Age)
     age = Age;
 }
 
+Student& Student::operator=(Student& stud)
+{
+    if (this->name != nullptr)
+        delete[] this->name;
+    this->name = new char[strlen(stud.name) + 1];
+    strcpy_s(this->name, strlen(this->name) + 1, stud.name);
+    this->age = stud.age;
+    return *this;
+}
+
 void Student::setName(const char* name)
 {
     this->name = new char[strlen(name) + 1];
